@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Étudiants — EduMind AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand" href="index.html"><i class="fas fa-brain me-2"></i>EduMind AI</a>
+            <div class="avatar" style="background:linear-gradient(135deg,var(--primary),var(--secondary))">NM</div>
+        </div>
+    </nav>
+    <div class="dashboard-layout">
+        <aside class="sidebar">
+            <div style="padding:0 24px 20px;border-bottom:1px solid var(--glass-border);margin-bottom:20px">
+                <div style="font-size:0.75rem;text-transform:uppercase;color:var(--text-muted);letter-spacing:1px">Menu</div>
+            </div>
+            <a href="dashboard.html" class="sidebar-link"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
+            <a href="students.html" class="sidebar-link active"><i class="fas fa-users"></i> Étudiants</a>
+            <a href="courses.html" class="sidebar-link"><i class="fas fa-book"></i> Cours</a>
+            <a href="quiz.html" class="sidebar-link"><i class="fas fa-question-circle"></i> Quiz IA</a>
+            <a href="index.html" class="sidebar-link"><i class="fas fa-home"></i> Accueil</a>
+        </aside>
+        <main class="main-content">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <div>
+                    <h2 style="font-weight:800;margin-bottom:4px">Gestion des Étudiants</h2>
+                    <p style="color:var(--text-muted);margin:0">8 étudiants enregistrés</p>
+                </div>
+                <button class="btn-primary-custom" style="padding:10px 24px;font-size:0.9rem">
+                    <i class="fas fa-plus me-2"></i>Ajouter
+                </button>
+            </div>
+            <div class="glass-card mb-4" style="padding:16px 20px">
+                <div class="d-flex gap-2">
+                    <input type="text" class="form-control-custom" placeholder="🔍 Rechercher un étudiant..." style="flex:1">
+                    <button class="btn-primary-custom" style="padding:10px 24px">Rechercher</button>
+                </div>
+            </div>
+            <div class="glass-card">
+                <div class="table-responsive">
+                    <table class="table-custom">
+                        <thead><tr><th>#</th><th>Étudiant</th><th>Email</th><th>Filière</th><th>Niveau</th><th>Statut</th><th>Moyenne</th></tr></thead>
+                        <tbody>
+                            <tr><td>1</td><td><div class="d-flex align-items-center gap-2"><div class="avatar" style="background:#6C5CE7;width:35px;height:35px;font-size:0.75rem">A</div><strong>Ahmed Bennani</strong></div></td><td style="color:var(--text-muted)">ahmed.b@edu.ma</td><td>Génie Informatique</td><td><span class="badge-custom badge-info">GI2</span></td><td><span class="badge-custom badge-success">Actif</span></td><td style="font-weight:700">16.5/20</td></tr>
+                            <tr><td>2</td><td><div class="d-flex align-items-center gap-2"><div class="avatar" style="background:#00D2FF;width:35px;height:35px;font-size:0.75rem">F</div><strong>Fatima Zahra El Amrani</strong></div></td><td style="color:var(--text-muted)">fatima.z@edu.ma</td><td>Génie Informatique</td><td><span class="badge-custom badge-info">GI1</span></td><td><span class="badge-custom badge-success">Actif</span></td><td style="font-weight:700">14.8/20</td></tr>
+                            <tr><td>3</td><td><div class="d-flex align-items-center gap-2"><div class="avatar" style="background:#0ACF83;width:35px;height:35px;font-size:0.75rem">Y</div><strong>Youssef Tazi</strong></div></td><td style="color:var(--text-muted)">youssef.t@edu.ma</td><td>IRISI</td><td><span class="badge-custom badge-info">IRISI3</span></td><td><span class="badge-custom badge-success">Actif</span></td><td style="font-weight:700">15.2/20</td></tr>
+                            <tr><td>4</td><td><div class="d-flex align-items-center gap-2"><div class="avatar" style="background:#FF6B6B;width:35px;height:35px;font-size:0.75rem">K</div><strong>Khadija Moussaoui</strong></div></td><td style="color:var(--text-muted)">khadija.m@edu.ma</td><td>Génie Informatique</td><td><span class="badge-custom badge-info">GI2</span></td><td><span class="badge-custom badge-danger">Absent</span></td><td style="font-weight:700">12.0/20</td></tr>
+                            <tr><td>5</td><td><div class="d-flex align-items-center gap-2"><div class="avatar" style="background:#FECA57;width:35px;height:35px;font-size:0.75rem">O</div><strong>Omar Chraibi</strong></div></td><td style="color:var(--text-muted)">omar.c@edu.ma</td><td>IRISI</td><td><span class="badge-custom badge-info">IRISI2</span></td><td><span class="badge-custom badge-success">Actif</span></td><td style="font-weight:700">17.3/20</td></tr>
+                            <tr><td>6</td><td><div class="d-flex align-items-center gap-2"><div class="avatar" style="background:#6C5CE7;width:35px;height:35px;font-size:0.75rem">S</div><strong>Sara Idrissi</strong></div></td><td style="color:var(--text-muted)">sara.i@edu.ma</td><td>Génie Informatique</td><td><span class="badge-custom badge-info">GI1</span></td><td><span class="badge-custom badge-success">Actif</span></td><td style="font-weight:700">15.9/20</td></tr>
+                            <tr><td>7</td><td><div class="d-flex align-items-center gap-2"><div class="avatar" style="background:#00D2FF;width:35px;height:35px;font-size:0.75rem">H</div><strong>Hamza El Fassi</strong></div></td><td style="color:var(--text-muted)">hamza.f@edu.ma</td><td>IRISI</td><td><span class="badge-custom badge-info">IRISI1</span></td><td><span class="badge-custom badge-success">Actif</span></td><td style="font-weight:700">13.7/20</td></tr>
+                            <tr><td>8</td><td><div class="d-flex align-items-center gap-2"><div class="avatar" style="background:#0ACF83;width:35px;height:35px;font-size:0.75rem">I</div><strong>Imane Berrada</strong></div></td><td style="color:var(--text-muted)">imane.b@edu.ma</td><td>Génie Informatique</td><td><span class="badge-custom badge-info">GI3</span></td><td><span class="badge-custom badge-info">Diplômé</span></td><td style="font-weight:700">18.2/20</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </main>
+    </div>
+    <button class="chatbot-toggle" id="chatbot-toggle"><i class="fas fa-robot"></i></button>
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header"><div style="width:40px;height:40px;background:rgba(255,255,255,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center"><i class="fas fa-robot"></i></div><div><h5>Assistant EduMind</h5><span class="status"><i class="fas fa-circle" style="font-size:8px;color:#0ACF83"></i> En ligne</span></div></div>
+        <div class="chatbot-messages" id="chatbot-messages"></div>
+        <div class="chatbot-input"><input type="text" id="chatbot-input" placeholder="Écrivez votre message..."><button id="chatbot-send"><i class="fas fa-paper-plane"></i></button></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
