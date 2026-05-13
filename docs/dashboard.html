@@ -10,15 +10,16 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-custom fixed-top"><div class="container-fluid px-4"><a class="navbar-brand" href="index.html"><i class="fas fa-brain me-2"></i>EduMind AI</a><div class="d-flex align-items-center gap-3"><div class="avatar" style="background:linear-gradient(135deg,var(--primary),var(--secondary))">NM</div></div></div></nav>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top"><div class="container-fluid px-4"><a class="navbar-brand" href="index.html"><i class="fas fa-brain me-2"></i>EduMind AI</a><div class="d-flex align-items-center gap-3"><span style="background:rgba(108,92,231,0.15);color:var(--primary);padding:5px 14px;border-radius:20px;font-size:0.8rem;font-weight:600"><i class="fas fa-lock me-1"></i> Admin</span><div class="avatar" style="background:linear-gradient(135deg,var(--primary),var(--secondary))">NM</div></div></div></nav>
     <div class="dashboard-layout">
         <aside class="sidebar">
             <div style="padding:0 24px 20px;border-bottom:1px solid var(--glass-border);margin-bottom:20px"><div style="font-size:0.75rem;text-transform:uppercase;color:var(--text-muted);letter-spacing:1px">Menu</div></div>
             <a href="dashboard.html" class="sidebar-link active"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
             <a href="students.html" class="sidebar-link"><i class="fas fa-users"></i> Étudiants</a>
             <a href="courses.html" class="sidebar-link"><i class="fas fa-book"></i> Cours</a>
-            <a href="quiz.html" class="sidebar-link"><i class="fas fa-question-circle"></i> Quiz IA</a>
+            <a href="quiz.html" class="sidebar-link"><i class="fas fa-question-circle"></i> Quiz</a>
             <a href="index.html" class="sidebar-link"><i class="fas fa-home"></i> Accueil</a>
+            <a href="login.html" class="sidebar-link" style="color:var(--danger);margin-top:auto" onclick="localStorage.removeItem('admin')"><i class="fas fa-sign-out-alt"></i> Déconnexion</a>
         </aside>
         <main class="main-content">
             <div class="d-flex justify-content-between align-items-center mb-4"><div><h2 style="font-weight:800;margin-bottom:4px">Dashboard</h2><p style="color:var(--text-muted);margin:0">Bienvenue, Prof. NADIR MOHAMED ANOUAR 👋</p></div></div>
