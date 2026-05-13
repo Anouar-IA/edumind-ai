@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Espace Étudiant — Connexion | EduMind AI</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+    <div class="auth-page">
+        <div class="auth-card">
+            <div style="text-align:center;margin-bottom:30px">
+                <div style="width:70px;height:70px;border-radius:20px;background:linear-gradient(135deg,#0ACF83,#00D2FF);margin:0 auto 16px;display:flex;align-items:center;justify-content:center;font-size:1.8rem;color:white">
+                    <i class="fas fa-user-graduate"></i>
+                </div>
+                <h2>Espace Étudiant</h2>
+                <p class="subtitle">Connectez-vous à votre portail étudiant</p>
+            </div>
+            <div id="login-error" style="display:none;background:rgba(255,107,107,0.1);border:1px solid rgba(255,107,107,0.3);border-radius:var(--radius-sm);padding:12px 16px;margin-bottom:20px;color:var(--danger);font-size:0.9rem">
+                <i class="fas fa-exclamation-circle me-2"></i>Identifiants incorrects.
+            </div>
+            <form id="student-login-form" onsubmit="return handleStudentLogin(event)">
+                <div class="mb-3">
+                    <label class="form-label-custom">Adresse Email</label>
+                    <div style="position:relative">
+                        <i class="fas fa-envelope" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--text-muted)"></i>
+                        <input type="email" id="student-email" class="form-control-custom" placeholder="ahmed.b@edu.ma" style="padding-left:44px" required>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <label class="form-label-custom">Mot de passe</label>
+                    <div style="position:relative">
+                        <i class="fas fa-lock" style="position:absolute;left:16px;top:50%;transform:translateY(-50%);color:var(--text-muted)"></i>
+                        <input type="password" id="student-pass" class="form-control-custom" placeholder="••••••••" style="padding-left:44px" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary-custom w-100 mb-3" style="text-align:center;background:linear-gradient(135deg,#0ACF83,#00D2FF)">
+                    <i class="fas fa-sign-in-alt me-2"></i>Se connecter
+                </button>
+                <p style="text-align:center;color:var(--text-muted);font-size:0.9rem">
+                    Accès administrateur ? <a href="login.html" style="color:var(--primary);text-decoration:none;font-weight:600">Login Admin</a>
+                </p>
+            </form>
+            <div style="margin-top:20px;padding-top:20px;border-top:1px solid var(--glass-border)">
+                <p style="color:var(--text-muted);font-size:0.8rem;text-align:center;margin-bottom:12px">📋 Comptes étudiants démo :</p>
+                <div style="background:var(--dark-3);border-radius:var(--radius-sm);padding:12px 16px;font-size:0.8rem;color:var(--text-muted)">
+                    <div class="mb-1"><strong style="color:var(--accent)">Ahmed Bennani</strong> — ahmed.b@edu.ma / etudiant123</div>
+                    <div class="mb-1"><strong style="color:var(--secondary)">Fatima Zahra</strong> — fatima.z@edu.ma / etudiant123</div>
+                    <div><strong style="color:var(--primary)">Omar Chraibi</strong> — omar.c@edu.ma / etudiant123</div>
+                </div>
+            </div>
+            <div style="margin-top:15px;text-align:center">
+                <a href="index.html" style="color:var(--text-muted);font-size:0.85rem;text-decoration:none"><i class="fas fa-arrow-left me-1"></i> Retour à l'accueil</a>
+            </div>
+        </div>
+    </div>
+    <script>
+    const students = {
+        'ahmed.b@edu.ma': {name:'Ahmed Bennani',filiere:'Génie Informatique',niveau:'GI2',avg:16.5,initials:'AB',color:'#6C5CE7'},
+        'fatima.z@edu.ma': {name:'Fatima Zahra El Amrani',filiere:'Génie Informatique',niveau:'GI1',avg:14.8,initials:'FZ',color:'#00D2FF'},
+        'omar.c@edu.ma': {name:'Omar Chraibi',filiere:'IRISI',niveau:'IRISI2',avg:17.3,initials:'OC',color:'#0ACF83'}
+    };
+    function handleStudentLogin(e) {
+        e.preventDefault();
+        const email = document.getElementById('student-email').value;
+        const pass = document.getElementById('student-pass').value;
+        if (students[email] && pass === 'etudiant123') {
+            localStorage.setItem('student', JSON.stringify(students[email]));
+            window.location.href = 'student-portal.html';
+        } else {
+            document.getElementById('login-error').style.display = 'block';
+        }
+        return false;
+    }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
